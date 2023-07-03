@@ -67,7 +67,7 @@ const Flagcomponent = ({ flag1, flag2 }) => {
           </div>
           <div className="stringsection">
             <span>{flag1}</span>
-            {"->"}
+            {" -> "}
             <span>{flag2}</span>
           </div>
         </div>
