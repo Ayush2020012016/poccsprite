@@ -4,10 +4,10 @@ import "./app.css";
 const App = () => {
   const flags = [
     { from: "INR", to: "USD" },
-    { from: "AZN", to: "AUD" },
-    { from: "AFN", to: "EUR" },
-    { from: "ALL", to: "DZD" },
-    { from: "ARS", to: "AMD" },
+    { from: "JPY", to: "AUD" },
+    { from: "AUD", to: "CAD" },
+    { from: "HUF", to: "PHP" },
+    { from: "CHF", to: "THB" },
   ];
   return (
     <>
@@ -22,35 +22,50 @@ const App = () => {
 
 const Flagcomponent = ({ flag1, flag2 }) => {
   const data = {
-    AFN: "af",
-    ALL: "al",
-    DZD: "dz",
-    EUR: "ad",
-    AOA: "ao",
-    ARS: "ar",
-    AMD: "am",
-    AUD: "au",
-    AZN: "az",
-    INR: "in",
-    USD: "us",
+    AUD: "australia",
+    BRL: "brazil",
+    CAD: "canada",
+    CLP: "chile",
+    CNY: "china",
+    CZK: "czech republic",
+    DKK: "denmark",
+    HKD: "hong kong",
+    HUF: "hungary",
+    INR: "india",
+    IDR: "indonesia",
+    JPY: "japan",
+    MYR: "malaysia",
+    MXN: "mexico",
+    NZD: "new zealand",
+    NOK: "norway",
+    PHP: "philippines",
+    PLN: "poland",
+    QAR: "qatar",
+    RON: "romania",
+    RUB: "russia",
+    SAR: "saudi arabia",
+    SGD: "singapore",
+    ZAR: "south africa",
+    KRW: "korea",
+    CHF: "switzerland",
+    TWD: "taiwan",
+    THB: "thailand",
+    TRY: "turkey",
+    USD: "united states",
   };
-  const dataentries = Object.keys(data);
-  console.log(dataentries, data["AFN"]);
+  const url1 = `./Flags/${data[flag1]}.svg`;
+  const url2 = `./Flags/${data[flag2]}.svg`;
+  console.log(url1, url2);
+
   return (
     <>
       <div className="listwrapper">
         <div className="firstsection">
           <div style={{ position: "relative" }} className="">
-            <span
-              style={{ borderRadius: "50%", width: "2em", height: "2em" }}
-              className={`fi fi-${data[flag1]} fis rightflag`}
-            ></span>
-            <span
-              style={{ borderRadius: "50%", width: "2em", height: "2em" }}
-              className={`fi fi-${data[flag2]} fis leftflag`}
-            ></span>
+            <img src={url1} alt="" />
+            <img className="leftflag" src={url2} alt="" />
           </div>
-          <div>
+          <div className="stringsection">
             <span>{flag1}</span>
             {"->"}
             <span>{flag2}</span>

@@ -1,16 +1,15 @@
 .wrapper{
     padding: 10px;
-    border: solid black 3px;
+    /* border: solid black 3px; */
     width: 400px;
 }
 .listwrapper{
     padding-block: 5px;
-    padding-inline: 8px ;
-    border: 2px solid red;
+    padding-inline: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+border-bottom: solid rgba(0, 0, 0, .5);
 }
 .firstsection{
     display: flex;
@@ -18,8 +17,12 @@
     justify-content: space-between;
 }
 .firstsection .leftflag{
-        margin-left: -10px;
+        margin-left: -2px;
         margin-right: 10px;
+}
+.firstsection img {
+    width: 16px;
+    height: 16px;
 }
 /* .firstsection span{
     position: absolute;
